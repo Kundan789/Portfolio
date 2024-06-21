@@ -1,0 +1,258 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        .body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        body {
+            /* position: absolute; */
+            display: flex;
+            justify-content: center;
+            background-image: url(WhatsApp\ Image\ 2024-05-21\ at\ 14.16.08_73626ad5.jpg);
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+            height: 100vh;
+            backdrope-filter:blur(4px);
+        }
+
+        .game {
+            display: flex;
+            height: 75vh;
+            width: 67%;
+            background-color: #ffffffe5;
+            margin-top: 73px;
+            box-shadow: 0px 0px 10px 0px whitesmoke;
+        }
+
+        .choices {
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            top: 20%;
+            left: 25%;
+            position: absolute;
+        }
+
+        .choice {
+            border: 5px solid transparent;
+            height: 130px;
+            width: 130px;
+            border-radius: 50%;
+            display: flex;
+            overflow: hidden;
+            justify-content: space-around;
+
+
+        }
+
+        .choice:hover {
+
+            border: 5px solid rgb(17, 0, 255);
+        }
+
+        .choice img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .scor-bord {
+            width: 200px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 42%;
+            font-size: 20px;
+        }
+
+        .msg-cntener {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 30rem;
+            left: 0%;
+
+        }
+
+        #msg {
+            padding: 0px 20px;
+            font-weight: 800;
+            font-size: 30px;
+            border-radius: 10px;
+            background-color: blue;
+            border: 2px solid black;
+
+
+        }
+
+        @media only screen and (max-width:700px) {
+            .choices {
+                width: 98%;
+                left: 1%;
+            }
+
+            .scor-bord {
+                left: 19%;
+            }
+
+            .msg-cntener {
+                left: 0%;
+            }
+            .game{
+                width: 100%;
+            }
+
+        }
+
+        .body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .div {
+            background-color: black;
+            color: white;
+            height: 500px;
+            width: 700px;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            font-size: 460%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 5px 5px 5px 5px gray;
+            user-select: none;
+            background-image: url(confetti-29.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: color(black);
+            animation: motion 0.2s 1 ease-in;
+            transition: transform .2s;
+            transform: scale(1);
+            margin-top: 73px;
+            position: absolute;
+            }
+
+            .div2 {
+            background-color: black;
+            position: absolute;
+            color: white;
+            height: 500px;
+            width: 700px;
+            border: 1px solid whitesmoke;
+            border-radius: 10px;
+            background-image: url(WhatsApp\ Image\ 2024-05-21\ at\ 14.08.01_6a075d1c.jpg);
+            background-position: center;
+            font-size: 460%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 5px 5px 5px 5px gray;
+            user-select: none;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: color(black);
+            animation: motion 0.2s 1 ease-in;
+            transition: transform .2s;
+            transform: scale(1);
+            margin-top: 73px;
+
+        }
+
+        @keyframes motion {
+            0% {
+                transform: scale(0.90);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        button {
+            height: 50px;
+            border-radius: 10px;
+            width: 200px;
+            position: absolute;
+            /* left: 35%; */
+            top: 80%;
+            z-index: 500;
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px solid white;
+            font-size: 30px;
+        }
+
+        button:hover {
+            background-color: rgb(58, 110, 255);
+            border: 2px solid green;
+            color: white;
+            cursor: pointer;
+
+        }
+
+        .thank {
+            border: 2px solid black;
+            -webkit-text-stroke: 2px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <!-- <h1 style="margin-left: 45%;">Choose One</h1> -->
+        <div class="choices">
+            <div id="Rock" class="choice" style="margin-top: 20px;"> <img src="R.jpg" alt=""></div>
+            <div id="Paper" class="choice"><img src="P.jpg" alt=""></div>
+            <div id="Scissors" class="choice" style="margin-top: 20px;"><img src="S.jpg" alt=""></div>
+        </div>
+
+
+        <div class="scor-bord">
+            <div class="score">
+                <p id="user-score" style="margin-left: 8px; font-size: 45px;">0</p>
+                <p>You</p>
+            </div>
+            <div class="score">
+                <p id="comp-score" style="margin-left: 8px; font-size: 45px;">0</p>
+                <p>comp</p>
+            </div>
+        </div>
+        <div class="msg-cntener">
+            <p id="msg">Play your move</p>
+        </div>
+    </div>
+
+    <div id="thank">
+    </div>
+    <script>
+
+        
+    </script>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/palette?f=classic&s=solid">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/x-twitter?f=brands&s=solid">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        background-image: url(back\ .png);
+        backdrop-filter: blur(3px);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .registration-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <div class="registration-container">
+        <p><a href="project.html"><i class="fa fa-close" style="margin-top: 0px; color: black;"
+                    aria-hidden="true"></i></a></p>
+        <h2>Login</h2>
+        <p class="error"></p>
+        <form action="#">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" class="login">Login</button>
+        </form>
+        <p style="display: flex; justify-content: center;width: 100%;margin-bottom: 0px;">If new user try &ThinSpace; <a
+                href="reg.html" style="color: blue;">creat new account</a></p>
+    </div>
+    <script>
+        let error = document.querySelector(".error")
+        let login = document.querySelector(".login")
+        let username = document.querySelector("#username")
+        let password = document.querySelector("#password")
+        login.addEventListener("click", function () {
+            if (username.value === "@kundan" && password.value === "Kundan@#2003") {
+                error.innerHTML = `Password Matched  <i class="fa fa-check" style="color: green;" aria-hidden="true"></i> `
+                error.style.color = "green"
+            }
+            else {
+                error.innerHTML = `username or password inncorrect <i class="fa fa-close" style="color: red;" aria-hidden="true"></i>`;
+                error.style.color = "red"
+            }
+        })
+    </script>
+</body>
+
+</html>
